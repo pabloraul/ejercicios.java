@@ -8,22 +8,21 @@ public class operacionesbinarias {
 		// TODO Auto-generated method stub
 		String sell=null;
 	int numero;
-	int exp;
+	int exp=0;
     int digito;
+    int resultado=0;
         double binario;
         Scanner sec = new Scanner(System.in);
-        System.out.println("CONVERSION DEC A BINARIO"
-        		+ "\n CONVERSION BINARIO A DEC");
+        System.out.println("1.-: CONVERSION DEC A BINARIO"
+        		     + "\n 2.-: CONVERSION BINARIO A DEC");
         sell=sec.nextLine();
-        
-        
-        	
-        	
-        	
-        do{ System.out.println("SELECCIONO DEC A BINARIO");
-            System.out.print("Introduce un numero entero: ");
-            numero = sec.nextInt();
-        }while(numero<0);
+        switch(sell){
+       
+        case("1"):
+        	  System.out.println("A seleccionado DEC A BINARIO"
+					  + "\n Ingrese numero:");
+        numero = sec.nextInt();
+        while(numero<0);
 
         exp=0;
         binario=0;
@@ -36,6 +35,53 @@ public class operacionesbinarias {
                 
         }
         System.out.printf("Binario: %.0f %n", binario);
+        break;
+        
+        case("2"):
+        	
+        Scanner sed=new Scanner(System.in);
+        System.out.println("ingrese binario:");
+        numero=sed.nextInt();
+        do{
+        	digito=numero%10;
+        	resultado=resultado+digito*(int)Math.pow(2, exp);
+        	exp++;
+        	numero=numero/10;
+        	}
+       while(numero>0);
+        System.out.println("DEC ES:"+resultado);
+        
+			 
 		
+		
+        
+        
+    	  
+			 
+       
+
+        
+        }
+        		
+        		
+        		
+        		
+        	
+        	
+        	
+       
+       
+       
+       
+        	
+		
+        
+        
+        
+        
+        	
+        	
+        	
+        
 	}
 }
